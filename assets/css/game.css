@@ -1,0 +1,175 @@
+.game_board{
+    width: 100%; 
+    height: 400px;
+    background: linear-gradient(rgb(136, 196, 236), rgb(213, 234, 247));
+    position: relative;
+    border-bottom: 10px solid green;
+    overflow: hidden;
+}
+
+.game_board_level2{
+    background: linear-gradient(rgb(247, 195, 97),rgb(236, 208, 158));
+}
+
+.game_over{
+    background-image: url('../img/game-over.jpg');
+    background-position: center;
+    background-size: cover;
+    border-bottom: none;
+}
+
+.section_text{
+    color: red;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.section_text > #game_over{
+    text-shadow: 2px 2px 20px red, 8px 8px 40px red;
+    position: absolute;
+    top: 1em;
+    
+}
+.section_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.section_buttons > .button_reset, .button_home{
+    position: absolute;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 1rem;
+    width: 100px;
+    color:white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.section_buttons > .button_home{
+    top: 8em;
+    background: rgba(0, 255, 0, 0.73);
+    color: #000;
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,255,0,0.73);
+    -moz-box-shadow: 2px 12px 18px 0px rgba(0,255,0,0.73);
+    box-shadow: 2px 2px 18px 0px rgba(0,255,0,0.73);
+    transition: 1s ease-in-out;
+}
+
+.section_buttons > .button_home:hover{
+    background: rgba(0, 180, 255, 0.73);
+    color: #fff;
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,180,255,0.73);
+    -moz-box-shadow: 2px 12px 18px 0px rgba(0,180,255,0.73);
+    box-shadow: 2px 2px 18px 0px rgba(0,180,250,0.73);
+}
+
+.button_home_none{
+    display: none !important;
+}
+
+.section_buttons > .button_reset{
+    top: 13em;
+    background: rgba(255, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(255,0,0,0.73);
+    -moz-box-shadow: 2px 12px 18px 0px rgba(255,0,0,0.73);
+    box-shadow: 2px 2px 18px 0px rgba(255,0,0,0.73);
+    transition: 2s ease-in-out;
+}
+
+.section_buttons > .button_reset:hover{
+    background: rgba(0, 255, 0, 0.73);
+    color: #000;
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,255,0,0.73);
+    -moz-box-shadow: 2px 12px 18px 0px rgba(0,255,0,0.73);
+    box-shadow: 2px 2px 18px 0px rgba(0,255,0,0.73);
+}
+
+.button_reset_none{
+    display: none !important;
+}
+
+.cloud, .cloud1, .cloud2{
+    width: 60px;
+    position: absolute;
+}
+
+.cloud0{
+    animation: animation linear infinite 21s;
+}
+.cloud1{
+    animation: animation linear infinite 22s;
+}
+.cloud2{
+    animation: animation linear infinite 23s;
+}
+
+.cloud_game_over{
+    display: none !important;
+}
+
+.section_img > .crash_running{
+    width: 100px;
+    position: absolute;
+    bottom: -10px;
+    animation: crash-jump 0.5s;
+    transition: 0.1s;
+}
+
+.crash_jump{
+    bottom: 60px !important;
+}
+
+.crash_game_over{
+    width: 60px !important;
+    bottom: 0 !important;
+    transition: 0.4s ease-in-out !important;
+}
+
+.cacto{
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    animation: animation linear infinite 2.5s;
+}
+
+.cacto_level_hard{
+    animation: animation linear infinite 1.8s !important;
+}
+
+.cacto_none{
+    display: none;
+}
+
+@keyframes crash-jump{
+    0%{
+        bottom: 60px;
+    }
+
+    60%{
+        bottom: 60px;
+    }
+
+    70%{
+        bottom: 60px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes animation{
+    0%{
+        right: -35px;
+    }
+
+    100%{
+        right: 105%;
+    }
+}
+
