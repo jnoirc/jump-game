@@ -6,6 +6,7 @@ const audio = document.querySelectorAll('audio');
 const button_home = document.querySelector('.button_home');
 button_home.classList.add('button_home_none')
 const button_reset = document.querySelector('.button_reset');
+const button_jump = document.querySelector('.button_jump');
 button_reset.classList.add('button_reset_none');
 const crashJump = ()=>{
     crash_img.classList.add('crash_jump');
@@ -16,7 +17,7 @@ const crashJump = ()=>{
     }, 500)
 }
 document.addEventListener('keydown', crashJump);
-
+button_jump.addEventListener('click', crashJump);
 const reset = ()=>{
     location.reload();
 }
@@ -25,6 +26,7 @@ button_reset.addEventListener('click', reset);
 const home = ()=>{
     location.href = '../../index.html';
 }
+
 button_home.addEventListener('click', home);
 const gameOver = ()=>{
     const msg_game_over = document.querySelector('#game_over');
