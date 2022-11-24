@@ -102,13 +102,6 @@
     align-items: center;
 }
 
-.mobile > .fa-arrow-up{
-    display: none;
-    position: absolute;
-    font-size: 20px;
-
-}
-
 .mobile > .button_jump{
     background: rgba(0, 240, 0, 0.73);
     -webkit-box-shadow: 2px 2px 18px 0px rgba(0,240,0,0.73);
@@ -165,7 +158,7 @@
 }
 
 .cacto_level_hard{
-    animation: animation linear infinite 1.8s !important;
+    animation: animation linear infinite 2s !important;
 }
 
 .cacto_none{
